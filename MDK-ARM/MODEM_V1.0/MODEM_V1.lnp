@@ -1,0 +1,27 @@
+--cpu Cortex-M3 --lto
+"modem_v1.0\startup_stm32f103xb.o"
+"modem_v1.0\main.o"
+"modem_v1.0\gpio.o"
+"modem_v1.0\tim.o"
+"modem_v1.0\usart.o"
+"modem_v1.0\stm32f1xx_it.o"
+"modem_v1.0\stm32f1xx_hal_msp.o"
+"modem_v1.0\stm32f1xx_hal_gpio_ex.o"
+"modem_v1.0\stm32f1xx_hal_tim.o"
+"modem_v1.0\stm32f1xx_hal_tim_ex.o"
+"modem_v1.0\stm32f1xx_hal.o"
+"modem_v1.0\stm32f1xx_hal_rcc.o"
+"modem_v1.0\stm32f1xx_hal_rcc_ex.o"
+"modem_v1.0\stm32f1xx_hal_gpio.o"
+"modem_v1.0\stm32f1xx_hal_dma.o"
+"modem_v1.0\stm32f1xx_hal_cortex.o"
+"modem_v1.0\stm32f1xx_hal_pwr.o"
+"modem_v1.0\stm32f1xx_hal_flash.o"
+"modem_v1.0\stm32f1xx_hal_flash_ex.o"
+"modem_v1.0\stm32f1xx_hal_exti.o"
+"modem_v1.0\stm32f1xx_hal_uart.o"
+"modem_v1.0\system_stm32f1xx.o"
+--strict --scatter "MODEM_V1.0\MODEM_V1.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "MODEM_V1.map" -o MODEM_V1.0\MODEM_V1.0
