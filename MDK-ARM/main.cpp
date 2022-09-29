@@ -24,7 +24,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "COM_CLASS.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -65,7 +65,7 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-	COM_CLASS CC("First_OBJ");
+	uint8_t Data[]={1,2,3,4,5,6,7,8,9,10};
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -92,7 +92,13 @@ int main(void)
   MX_USART3_UART_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-
+	COM_CLASS <128,128> CC((char*)"First_COM_Class");
+	CC.Write_TX_Byte_CMODE(120);
+	CC.Write_TX_Buffer(Data,sizeof(Data));
+	__NOP();
+	CC.Read_TX_Buffer(0);
+	CC.Write_RX_Buffer((uint8_t*)"Hello amu abas\r\n",strlen("Hello amu abas\r\n"),10);
+	__NOP();
   /* USER CODE END 2 */
 
   /* Infinite loop */

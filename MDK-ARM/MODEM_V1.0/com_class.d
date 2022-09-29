@@ -1,5 +1,6 @@
-modem_v1.0/main.o: main.cpp ..\Core\Inc\main.h \
-  ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h \
+modem_v1.0/com_class.o: ..\Core\USER\ File\COM_CLASS.cpp \
+  ..\Core\USER\ File\COM_CLASS.h ..\Core\Inc\MyHeader.h \
+  ..\Core\Inc\main.h ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal.h \
   ..\Core\Inc\stm32f1xx_hal_conf.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_rcc.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_def.h \
@@ -32,9 +33,6 @@ modem_v1.0/main.o: main.cpp ..\Core\Inc\main.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_tim_ex.h \
   ..\Drivers\STM32F1xx_HAL_Driver\Inc\stm32f1xx_hal_uart.h \
-  ..\Core\Inc\tim.h ..\Core\Inc\main.h ..\Core\Inc\usart.h \
-  ..\Core\Inc\gpio.h ..\Core\USER\ File\COM_CLASS.h \
-  ..\Core\Inc\MyHeader.h \
   G:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdio.h \
   G:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   G:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdlib.h \
